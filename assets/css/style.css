@@ -406,21 +406,26 @@ a.videobox--menu_link svg {
 	-webkit-align-items: flex-start;
 	-ms-flex-align: start;
 	align-items: flex-start;
-	margin: 5% 0;
+	margin: 5%;
 }
 .welcome p {
-	padding: 0 5%;
 	font-size: 120%;
 	line-height: 1.5;
+	width: 60%;
+/*
 	-ms-flex-preferred-size: 60%;
 	-webkit-flex-basis: 60%;
 	flex-basis: 60%;
+*/
 }
 .welcome-list {
-	position: relative;
+	width: 40%;
+/*
 	-ms-flex-preferred-size: 40%;
 	-webkit-flex-basis: 40%;
 	flex-basis: 40%;
+*/
+	margin-left: 3%;
 	padding-left: 10%;
 	background-image: url("../img/buddist.png");
 	background-repeat: no-repeat;
@@ -844,6 +849,20 @@ footer section:last-of-type .download p {
 {
 	header {
 		height: auto;
+	}
+
+	.welcome {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.welcome p,
+	.welcome-list {
+		width: 100%;
+	}
+
+	.welcome-list {
+		margin-top: 3%;
 	}
 
 	main .row {
