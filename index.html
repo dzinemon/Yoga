@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Yoga</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<!--	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+	<link rel="stylesheet" href="assets/css/font.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+
+<body>
+	<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+
+		<symbol id="question-mark" viewBox="0 0 612.074 612.074">
+			<path d="M306.037 0C136.997 0 0 136.997 0 306.037s136.997 306.037 306.037 306.037 306.037-136.997 306.037-306.037S474.26 0 306.037 0zm0 582.405c-152.203 0-276.368-124.165-276.368-276.368S153.02 29.67 306.036 29.67s276.368 124.164 276.368 276.367S458.24 582.405 306.037 582.405zm12.832-128.17c0 8.826-7.196 16.02-16.022 16.02-8.827 0-16.02-7.195-16.02-16.02 0-8.828 7.194-16.022 16.02-16.022 8.752 0 16.02 7.195 16.02 16.02zm66.458-217.92c0 28.037-16.02 53.7-45.69 71.28-21.658 12.832-20.843 28.037-20.843 28.853V374.944c0 8.01-6.38 14.39-14.39 14.39s-15.205-6.38-15.205-14.39v-36.048c-.816-12.832 5.637-37.68 34.416-55.26 14.39-8.826 31.227-24.03 31.227-46.43 0-27.222-22.4-49.697-49.696-49.697s-49.696 22.4-49.696 49.695c0 8.01-6.378 14.39-14.39 14.39s-14.39-6.38-14.39-14.39c0-44.06 35.233-79.29 79.292-79.29s79.366 34.34 79.366 78.4z" />
+		</symbol>
+		<symbol id="cloud-flash" viewBox="0 0 489.778 489.778">
+			<path d="M489.778 267.858c0 62.465-50.82 113.298-113.298 113.298H275.584l10.91-24.21h89.986c49.118 0 89.087-39.97 89.087-89.088 0-49.124-39.97-89.09-89.087-89.09-5.515 0-11.22.556-16.952 1.652l-14.522 2.784.136-14.786c.012-.564.04-1.114.083-1.67.012-72.18-58.646-130.834-130.75-130.834-72.093 0-130.743 58.65-130.743 130.75 0 2.02.145 4 .278 5.984l.662 10.465-7.67 3.428C44.926 200.873 24.2 232.793 24.2 267.847c0 49.13 39.965 89.094 89.083 89.094h18.436l-10.253 24.21h-8.17C50.823 381.15 0 330.323 0 267.846c0-41.753 23.11-80.01 59.545-99.67-.012-.508-.018-1.01-.018-1.52 0-85.445 69.51-154.958 154.954-154.958 81.46 0 148.446 63.177 154.517 143.114 2.52-.168 5.013-.26 7.483-.26 62.477.006 113.298 50.83 113.298 113.306zm-213.686 53.61l-86.826-.153 74.153-105.52h-70.54L135 348.444h86.822l-63.31 129.636 117.58-156.61z" />
+		</symbol>
+		<symbol id="connection" viewBox="0 0 290 290">
+			<path d="M234.998 32.726c-2.76-.034-5.028 2.177-5.062 4.938-.02 1.524.658 2.973 1.84 3.937C262.345 67.255 280 105.11 280 145.018c0 39.908-17.653 77.764-48.225 103.416-2.12 1.768-2.407 4.922-.64 7.043 1.77 2.12 4.923 2.407 7.044.64l.025-.023C271.035 228.545 290 187.875 290 145.017c0-42.858-18.964-83.528-51.795-111.076-.892-.77-2.028-1.2-3.207-1.214zm-180.146.004c-1.126.048-2.203.474-3.057 1.21C18.965 61.49 0 102.16 0 145.018c0 42.858 18.964 83.528 51.795 111.076 2.11 1.783 5.264 1.518 7.047-.592 1.783-2.108 1.518-5.263-.59-7.046l-.027-.022C27.653 222.782 10 184.925 10 145.017 10 105.11 27.653 67.253 58.225 41.6c2.14-1.744 2.46-4.894.715-7.035-.998-1.222-2.513-1.902-4.088-1.835zm134.076 38.297c-2.76-.034-5.028 2.176-5.062 4.938-.02 1.525.66 2.976 1.842 3.94 19.25 16.15 30.363 39.984 30.363 65.112s-11.113 48.96-30.362 65.113c-2.144 1.74-2.47 4.89-.73 7.034 1.74 2.144 4.89 2.47 7.034.73l.124-.104c21.51-18.048 33.936-44.695 33.936-72.773s-12.426-54.725-33.936-72.773c-.893-.77-2.03-1.202-3.208-1.217zm-88.006.004c-1.126.05-2.204.477-3.057 1.214-21.51 18.048-33.935 44.695-33.935 72.773 0 28.078 12.426 54.725 33.936 72.773 2.087 1.81 5.245 1.584 7.054-.502 1.81-2.087 1.584-5.245-.502-7.054-.04-.035-.082-.07-.124-.104-19.25-16.152-30.363-39.985-30.363-65.113 0-25.13 11.115-48.96 30.364-65.113 2.14-1.744 2.463-4.894.72-7.035-1-1.225-2.515-1.907-4.092-1.84zM145 110.018c-19.27 0-35 15.73-35 35s15.73 35 35 35 35-15.73 35-35-15.73-35-35-35zm0 10c13.866 0 25 11.134 25 25s-11.134 25-25 25-25-11.134-25-25 11.134-25 25-25zm0 7.5c-1.38-.02-2.516 1.084-2.535 2.465-.02 1.38 1.084 2.516 2.465 2.535h.07c6.934 0 12.5 5.567 12.5 12.5-.02 1.38 1.085 2.516 2.466 2.535 1.38.02 2.516-1.084 2.535-2.465v-.07c0-9.635-7.865-17.5-17.5-17.5z" />
+		</symbol>
+		<symbol id="four-arrow" viewBox="0 0 64.436 64.436">
+			<path d="M63.27 31.05H42.693l10.2-10.203c.457-.455.457-1.195 0-1.65-.45-.456-1.195-.456-1.65 0L39.046 31.39h-.002l-.823.826.823.825h.002L51.242 45.24c.233.23.532.34.828.34.297 0 .598-.114.828-.34.452-.456.452-1.197 0-1.65L42.693 33.385h20.575c.643 0 1.168-.524 1.168-1.168s-.525-1.168-1.166-1.168zM25.39 33.043l.828-.825-.827-.826-12.2-12.197c-.453-.455-1.196-.455-1.65 0-.454.456-.454 1.196 0 1.65l10.2 10.205H1.168C.523 31.05 0 31.574 0 32.218s.523 1.168 1.168 1.168h20.574L11.54 43.59c-.454.453-.454 1.194 0 1.65.23.23.53.34.826.34s.598-.114.827-.34L25.39 33.043c-.002 0-.002 0 0 0zM33.043 39.05l-.825-.826-.827.823v.003l-12.2 12.192c-.454.456-.454 1.197 0 1.65.457.457 1.197.457 1.652 0l10.203-10.2v20.575c0 .644.523 1.168 1.168 1.168.644 0 1.168-.524 1.168-1.168V42.692l10.204 10.2c.23.23.53.343.828.343.3 0 .598-.114.825-.342.452-.454.452-1.195 0-1.65L33.043 39.05zM31.393 25.386l.827.827.828-.825 12.2-12.196c.455-.455.455-1.196 0-1.65s-1.196-.456-1.652 0L33.39 21.74V1.168C33.39.523 32.866 0 32.222 0c-.642 0-1.167.523-1.167 1.168v20.574l-10.206-10.2c-.454-.456-1.196-.456-1.65 0-.455.454-.455 1.195 0 1.65l12.193 12.194z" />
+		</symbol>
+		<symbol id="interface" viewBox="0 0 60 60">
+			<path d="M6 2h48c3.252 0 6 2.748 6 6v33c0 3.252-2.748 6-6 6H25.442L15.74 57.673c-.194.212-.464.327-.74.327-.12 0-.243-.022-.36-.067-.386-.15-.64-.52-.64-.933V47H6c-3.252 0-6-2.748-6-6V8c0-3.252 2.748-6 6-6z" />
+		</symbol>
+		<symbol id="sound-levels" viewBox="0 0 44 44">
+			<path fill-rule="evenodd" d="M3 21H1c-.6 0-1 .4-1 1s.4 1 1 1h2c.6 0 1-.4 1-1s-.4-1-1-1zm40 0h-2c-.6 0-1 .4-1 1s.4 1 1 1h2c.6 0 1-.4 1-1s-.4-1-1-1zM36 14c-.6 0-1 .4-1 1v14c0 .6.4 1 1 1s1-.4 1-1V15c0-.6-.4-1-1-1zm-20 0c-.6 0-1 .4-1 1v14c0 .6.4 1 1 1s1-.4 1-1V15c0-.6-.4-1-1-1zm-8 4c-.6 0-1 .4-1 1v6c0 .6.4 1 1 1s1-.4 1-1v-6c0-.6-.4-1-1-1zm24-8c-.6 0-1 .4-1 1v22c0 .6.4 1 1 1s1-.4 1-1V11c0-.6-.4-1-1-1zm-8 0c-.6 0-1 .4-1 1v22c0 .6.4 1 1 1s1-.4 1-1V11c0-.6-.4-1-1-1zm-12 0c-.6 0-1 .4-1 1v22c0 .6.4 1 1 1s1-.4 1-1V11c0-.6-.4-1-1-1zm16-4c-.6 0-1 .4-1 1v30c0 .6.4 1 1 1s1-.4 1-1V7c0-.6-.4-1-1-1zm-8 0c-.6 0-1 .4-1 1v30c0 .6.4 1 1 1s1-.4 1-1V7c0-.6-.4-1-1-1z" />
+		</symbol>
+		<symbol id="heart" viewBox="0 0 32 32">
+			<path d="M14.7 15.8c-.4-1-.7-2-.7-3.3s.3-2.5.7-3.7c.5-1 1-2.2 2-3.2.8-1 1.7-1.7 2.8-2.2 1-.6 2.3-1 3.5-1s2.4.4 3.5.8c1 .5 2 1 3 2 .7.7 1.3 1.7 1.8 2.8.4 1 .7 2.3.7 3.5s-.3 2.4-.7 3.5c-.5 1-1 2-2 3-.8.7-12.2 11-13.3 11.5C15 29 3.4 18.7 2.6 18c-.8-1-1.4-2-2-3-.3-1-.6-2.3-.6-3.5S.3 9 .7 8c.5-1 1-2 2-3 .8-.7 1.7-1.3 2.8-1.8 1-.4 2.3-.7 3.5-.7s2.4.3 3.5 1c1 .4 2 1.2 3 2 .7 1 1.3 2.2 1.8 3.3.4 1.2.7 2.5.7 3.7s-.3 2.4-.7 3.3c-.5 1-1 2-2 2.6" />
+		</symbol>
+		<symbol id="meditation" viewBox="0 0 297 297">
+			<path d="M148.5 101.3c25.4 0 46.8-22.3 46.8-48.7 0-25.2-20.6-45-46.8-45s-46.8 19.8-46.8 45c0 26.4 21.4 48.7 46.8 48.7zM29.8 224.5l34.3 3 25.7-55.2c1.4-3.2 5-5 8.4-4.2 3.6 1 6 4 6 7.5v27l83.2-81.8c-13.7-4-28.3-6-38.7-6-20.7 0-58 8.2-71.5 23-14.5 15.7-41 59.3-57.3 87 3.3-.5 6.7-.6 10-.2zM288.6 245.6c-5.4-4.8-12.6-7-19.7-6l-82 10.2 8.5 39.5H272c13.8 0 25-11.2 25-25 0-7.2-3-14-8.4-18.7zM25 239.3c-6 0-12 2.2-16.6 6.3C3 250.3 0 257 0 264.3c0 13.8 11.2 25 25 25h155l-8-37.5-147-12.5zM104 231l58 5h14.6l16.4-2.2v-58.3c0-3.6 2.4-6.6 6-7.4 3.3-.7 7 1 8.3 4.3l26.2 56.5 33.5-4.2c3.5-.5 7-.4 10.3 0-16.3-27.6-43-71.2-57.3-87-4-4.3-10-8-17-11.2l-99 97.3v7.2z" />
+		</symbol>
+		<symbol id="play-button" viewBox="0 0 60 60">
+			<path d="M45.6 29.2l-22-15c-.3-.2-.7-.3-1 0-.4 0-.6.4-.6.8v30c0 .4.2.7.5 1h.5c.2 0 .4 0 .6-.2l22-15c.2-.2.4-.5.4-.8s-.2-.6-.4-.8zM24 43.2V16.8l19.2 13L24 43z" />
+			<path d="M30 0C13.5 0 0 13.5 0 30s13.5 30 30 30 30-13.5 30-30S46.5 0 30 0zm0 58C14.6 58 2 45.4 2 30S14.6 2 30 2s28 12.6 28 28-12.6 28-28 28z" />
+		</symbol>
+		<symbol id="refresh-button" viewBox="0 0 252.3 252.3">
+			<path d="M249 80.7c-3.4-2.3-8-1.5-10.4 2L223.3 105C213.6 60.5 173.7 27 126 27c-26.4 0-51.4 10.3-70 29-3 3-3 7.7 0 10.7 2.8 3 7.5 3 10.5 0 16-16 37-24.7 59.6-24.7 41.4 0 76 30 83 69.2l-26.5-18.2c-3.4-2.3-8-1.4-10.4 2-2.3 3.4-1.4 8 2 10.4l39.8 27c1 .8 2 1.2 3 1.4h1.2c2.4 0 4.7-1 6.2-3.2L251 91c2.3-3.3 1.4-8-2-10.3zM187.2 184.4c-16 16.8-37.8 26-61 26-41.4 0-76-29.8-83-69l26.6 18c1.3 1 2.7 1.3 4.2 1.3 2.4 0 4.7-1 6.2-3.2 2.3-3.5 1.4-8-2-10.5l-39.7-27c-3.4-2.4-8-1.5-10.4 2L1.4 161c-2.3 3.6-1.4 8.2 2 10.6 1.3 1 2.7 1.3 4.2 1.3 2.4 0 4.7-1.3 6.2-3.4L29 147c9.7 45 49.6 78.5 97 78.5 27.6 0 53-11 72-30.8 3-3 2.8-7.7-.2-10.6-3-2.8-7.7-2.6-10.6.4z" />
+		</symbol>
+		<symbol id="settings-button" viewBox="0 0 54 54">
+			<path d="M51.2 21h-5c-.8 0-1.5-.4-1.8-1.2s-.2-1.5.4-2l3.6-3.7c.5-.4.8-1 .8-1.8s-.3-1.5-.8-2l-4.6-4.6c-1-1-3-1-4 0l-3.5 3.6c-.6.6-1.4.7-2 .4-1-.3-1.3-1-1.3-1.8v-5C33 1.2 31.8 0 30.2 0h-6.4C22.2 0 21 1.2 21 2.8v5c0 .8-.4 1.5-1.2 1.8-.7.3-1.5.2-2-.4L14 5.6c-1-1-2.8-1-3.8 0l-4.6 4.6c-.5.5-.8 1.2-.8 2 0 .7.3 1.4.8 2l3.6 3.5c.6.6.7 1.4.4 2S8.6 21 7.8 21h-5C1.2 21 0 22.2 0 23.8v6.4C0 31.8 1.2 33 2.8 33h5c.8 0 1.5.4 1.8 1.2s.2 1.5-.4 2L5.6 40c-.5.4-.8 1-.8 1.8s.3 1.5.8 2l4.6 4.6c1 1 3 1 4 0l3.5-3.6c.6-.6 1.4-.7 2-.4 1 .3 1.3 1 1.3 1.8v5c0 1.6 1.2 2.8 2.8 2.8h6.4c1.6 0 2.8-1.2 2.8-2.8v-5c0-.8.4-1.5 1.2-1.8.7-.3 1.5-.2 2 .4l3.7 3.6c1 1 2.8 1 3.8 0l4.6-4.6c.5-.5.8-1.2.8-2 0-.7-.3-1.4-.8-2l-3.6-3.5c-.6-.6-.7-1.4-.4-2s1-1.3 1.8-1.3h5c1.6 0 2.8-1.2 2.8-2.8v-6.4c0-1.6-1.2-2.8-2.8-2.8zm.8 9.2c0 .4-.4.8-.8.8h-5c-1.7 0-3 1-3.7 2.4-.6 1.5-.3 3.2 1 4.3l3.5 3.6c.3.3.3.8 0 1L42.4 47c-.3.3-.8.3-1 0l-3.7-3.6c-1-1.2-2.8-1.5-4.3-1-1.5.7-2.4 2-2.4 3.8v5c0 .4-.4.8-.8.8h-6.4c-.4 0-.8-.4-.8-.8v-5c0-1.7-1-3-2.4-3.7-.5-.2-1-.3-1.6-.3-1 0-2 .4-2.7 1.2L12.7 47c-.3.3-.8.3-1 0L7 42.4c-.3-.3-.3-.8 0-1l3.6-3.7c1.2-1 1.5-2.8 1-4.3-.7-1.5-2-2.4-3.8-2.4h-5c-.4 0-.8-.4-.8-.8v-6.4c0-.4.4-.8.8-.8h5c1.7 0 3-1 3.7-2.4.6-1.5.3-3.2-1-4.3L7 12.7c-.3-.3-.3-.8 0-1L11.6 7c.3-.3.8-.3 1 0l3.7 3.6c1 1.2 2.8 1.5 4.3 1 1.5-.7 2.4-2 2.4-3.8v-5c0-.4.4-.8.8-.8h6.4c.4 0 .8.4.8.8v5c0 1.7 1 3 2.4 3.7 1.5.6 3.2.3 4.3-1L41.3 7c.3-.3.8-.3 1 0l4.7 4.6c.3.3.3.8 0 1l-3.6 3.7c-1.2 1-1.5 2.8-1 4.3.7 1.5 2 2.4 3.8 2.4h5c.4 0 .8.4.8.8v6.4z" />
+			<path d="M27 18c-5 0-9 4-9 9s4 9 9 9 9-4 9-9-4-9-9-9zm0 16c-4 0-7-3-7-7s3-7 7-7 7 3 7 7-3 7-7 7z" />
+		</symbol>
+		<symbol id="pinterest" viewBox="0 0 310.1 310.1">
+			<path d="M245.3 31.8C224 11.3 194.3 0 162 0 113 0 82.5 20.2 65.8 37.2c-20.7 21-32.5 48.6-32.5 76 0 34.6 14.4 61 38.6 71 1.6.6 3.2 1 4.8 1 5 0 9.2-3.4 10.6-8.7l3.5-14c1.8-6.4.4-9.6-3.5-14-7-8.4-10.2-18.2-10.2-31 0-37.7 28-78 80.3-78 41.4 0 67.2 23.6 67.2 61.5 0 24-5.2 46-14.5 62.4-6.5 11.3-18 24.8-35.5 24.8-7.6 0-14.4-3-18.7-8.5-4-5.2-5.4-11.8-3.8-18.7 2-7.8 4.4-16 6.8-24 4.4-14.3 8.6-28 8.6-38.7 0-18.6-11.4-31-28.3-31-21.5 0-38.4 22-38.4 49.8 0 14 3.7 24 5.3 28l-22 93c-1.8 7.5-12.5 67 5.2 71.7 19.8 5.3 37.6-52.6 39.4-59.2l9.7-37.8c9.6 9.2 25 15.4 40 15.4 28.3 0 53.7-12.6 71.6-35.7 17.3-22.4 27-53.7 27-88 0-26.8-11.7-53.2-31.7-72.5z" />
+		</symbol>
+		<symbol id="instagram" viewBox="0 0 438.5 438.5">
+			<path d="M422 16.6C411 5.6 397.7 0 382.3 0h-326C40.7 0 27.5 5.5 16.5 16.6 5.6 27.6 0 40.8 0 56.2v326C0 397.8 5.5 411 16.6 422c11 11 24.2 16.5 39.6 16.5h326c15.5 0 28.7-5.5 39.8-16.5 11-11 16.5-24.3 16.5-39.7v-326c0-15.5-5.5-28.7-16.5-39.7zM157.5 158c17.2-16.6 38-25 62-25 24.4 0 45.2 8.4 62.4 25 17.2 16.7 25.8 36.8 25.8 60.4s-8.6 43.7-26 60.4c-17 16.6-38 25-62.2 25-24.2 0-45-8.4-62-25-17.4-16.7-26-36.8-26-60.4s8.6-43.7 26-60.4zM389 370.6c0 5-2 9-5.3 12.4-3.4 3.3-7.5 5-12.3 5H66.2c-5 0-9-1.7-12.4-5-3.3-3.3-5-7.5-5-12.4v-185H89c-3.7 12-5.6 24.4-5.6 37.4 0 36.5 13.3 67.7 40 93.5 26.6 25.8 58.7 38.7 96.2 38.7 24.7 0 47.5-6 68.5-17.7 21-11.8 37.6-28 49.8-48C349.8 269 356 247 356 223c0-13-2-25.4-5.7-37.4H389v185zm0-255c0 5.5-2 10.2-6 14-3.7 3.8-8.3 5.7-13.8 5.7h-49.7c-5.5 0-10.2-2-14-5.7-3.8-3.8-5.7-8.5-5.7-14v-47c0-5.4 2-10 5.7-14 3.8-3.8 8.5-5.8 14-5.8h49.7c5.5 0 10 2 14 6 3.8 3.8 5.7 8.4 5.7 13.7v47z" />
+		</symbol>
+		<symbol id="facebook" viewBox="0 0 310 310">
+			<path d="M81.7 165h34v140c0 2.8 2.2 5 5 5h57.6c2.8 0 5-2.2 5-5V165.8h39c2.6 0 4.7-2 5-4.5l6-51.5c0-1.4-.3-2.8-1.3-4-1-1-2.3-1.5-3.7-1.5h-45V72c0-9.8 5.2-14.7 15.6-14.7h29.3c2.8 0 5-2.2 5-5V5c0-2.7-2.2-5-5-5h-42.5c-7 0-31.4 1.4-50.7 19.2-21.3 19.6-18.3 43.2-17.6 47.3v37.8H81.7c-2.8 0-5 2.2-5 5V160c0 3 2.2 5 5 5z" />
+		</symbol>
+		<symbol id="twitter" viewBox="0 0 512 512">
+			<path d="M512 97.2c-18.8 8.4-39 14-60.3 16.6 21.7-13 38.3-33.6 46.2-58.2-20.4 12-43 20.8-66.8 25.5-19.2-20.3-46.5-33-76.7-33-58 0-105 47-105 105 0 8.2 1 16.2 2.7 24C165 172.5 87.5 130.6 35.6 67c-9 15.5-14.2 33.5-14.2 52.8 0 36.4 18.6 68.6 46.8 87.4-17.3-.5-33.5-5.2-47.6-13v1.2c0 51 36.2 93.4 84.2 103-8.8 2.4-18 3.7-27.6 3.7-6.8 0-13.4-.7-19.8-2 13.4 41.8 52.2 72.2 98 73-35.8 28.2-81 45-130.3 45-8.4 0-16.8-.5-25-1.5 46.5 30 101.7 47.2 161 47.2 193.2 0 299-160 299-298.8 0-4.6-.2-9-.4-13.6C480 136.8 498 118.3 512 97.2z" />
+		</symbol>
+		<symbol id="grid-button" viewBox="0 0 612 612">
+			<path d="M0 0v612h612V0H0zm572.6 383.7h-152V229.5h152v154.2zm-190 0h-153V229.5h153v154.2zm0 37v153h-153v-153h153zM38 229.6h153v154.2h-153V229.5zm191.3-38.3V39.6h153v151.8h-153zM191.2 39.6v151.8h-153V39.4h153zm-153 381.3h153v153h-153v-153zm382.6 153v-153h151.8v153h-152zm151.8-382.5h-152V39.4h152v151.8z" />
+		</symbol>
+		<symbol id="tv-button" viewBox="0 0 201.6 201.6">
+			<path d="M0 27.5V158h201.6V27.4H0zm196 124.7H5.6v-119H196v119zM62.8 174h73.7v-9.7H62.8" />
+			<path d="M87.6 121.5l1.2.3c.6 0 1.2-.2 1.7-.6l32-26.3c.5-.6 1-1.4 1-2.2 0-.8-.5-1.6-1-2l-32-26.4c-.8-.7-2-.8-3-.4-.8.5-1.4 1.4-1.4 2.5V119c0 1.2.7 2 1.6 2.5zm4-49.3l25 20.6-25 20.6V72.2z" />
+		</symbol>
+		<symbol id="persons" viewBox="0 0 239.2 239.2">
+			<path d="M148.6 209.4H0C0 179 20 146 47.8 135.7c-6-6-10.4-8-12.5-22-3 .7-7.4-2.6-8.7-7.6-1.4-5-2.2-13.3.7-14 .8-.3 1.7 0 2.6.3V78C30 56 24.6 42.8 61 39l-.4-.2s13.2-2.2 20.8-9c0 0 13.7 6.7 19 11.5 13.2 12.2 18.8 21.3 18.3 36.8v14.3c.8-.4 1.7-.6 2.6-.4 3 .7 1.4 9.3 0 14.4-1.3 5-5 8-8 7.4-2 13.3-6.7 15.4-13.2 21.8 28 10 48.2 43.4 48.2 73.8zm50-62c5.5-5.4 9.4-7.2 11.2-18.4 2.4.4 5.6-2 6.7-6.2 1-4.3 2.4-11.5 0-12.2-.7-.2-1.5 0-2.2.3V99c.3-13-4.4-20.7-15.6-31-4.4-4-15.8-9.7-15.8-9.7-6.5 5.8-17.6 7.7-17.6 7.7h.2c-30.6 3.2-26.2 14.2-26.2 33v12c-.8-.4-1.5-.6-2.2-.4-2.5.7-1.8 7.6-.6 12 1 4 4.8 7 7.2 6.4 2 11.8 5.5 13.3 10.6 18.4-5.3 2-10.2 5-14.8 8.6 13 14.6 21 34.5 21.4 53.4h78.2c0-25.6-17-53.6-40.6-62z" />
+		</symbol>
+		<symbol id="youtube" viewBox="0 0 557 557">
+			<path d="M336.6 53.2v122.4c0 10.6.8 18.3 2.5 23.3 2.8 7.6 9 11.4 18.4 11.4 10.4 0 21-6.4 32-19.3v17.2h28.3v-155h-28.3v118.4c-6.2 9-12 13.3-17.7 13.3-3.7 0-6-2.3-6.5-7-.2-.3-.3-4-.3-10.8v-114h-28.4zM272 210.4c14.3 0 25.2-5.3 33-15.8 5.7-7.7 8.6-20 8.6-36.7v-54.5c0-16.6-3-28.7-8.7-36.4-7.8-10.4-18.7-15.7-33-15.7-14 0-24.8 5.3-32.7 15.8-5.8 7.8-8.7 20-8.7 36.5V158c0 16.5 3 28.7 8.7 36.6 8 10.5 18.8 15.8 32.7 15.8zM258.6 98c0-14.4 4.4-21.5 13.4-21.5s13.3 7 13.3 21.4V163c0 14.5-4.4 21.7-13.3 21.7-9 0-13.4-7.3-13.4-21.8V98zM192.7 208.2V124L230.3 0h-31.7l-21 81.7L155.3 0h-33c6 17.4 12.6 36.8 20.3 58 9.7 28.7 16 50.7 19 66v84.2h31zM482.8 257c-9.2-8.2-19.8-13-31.8-14.6-38-4-95.6-6.2-172.5-6.2-77 0-134.3 2-172.2 6.2-12.2 1.5-23 6.4-32 14.6-9 8.3-15 18.6-18 30.8-5.4 24-8 60.3-8 108.8 0 49.3 2.6 85.6 8 108.8C59 517.6 65 527.8 74 536c9.3 8.4 20 13.2 32 14.4 38 4.4 95.6 6.6 172.5 6.6 77 0 134.4-2.2 172.5-6.6 12-1.2 22.6-6 31.7-14.3 9-8.2 15-18.4 18-30.6 5.4-24 8-60.3 8-108.8 0-49.3-2.6-85.6-8-108.8-2.7-12.2-8.6-22.5-18-30.8zm-303.2 62.2h-33.2V496h-31V319.2H82.6V290h97v29.2zm84 176.8H236v-16.7c-11.3 12.6-22 19-31.8 19-9.5 0-15.5-4-18-11.6-1.7-5-2.5-12.5-2.5-22.7V342.5h27.6v113c0 6.8 0 10.4.4 11 .6 4.4 2.8 6.5 6.5 6.5 5.6 0 11.5-4.3 17.7-13V342.5h27.6V496zm105.6-46c0 15.2-1 25.5-2.8 31-3.5 11.5-10.8 17.2-22 17.2-10 0-19.6-5.7-29-17V496H288V290h27.7v67.4c9-11.2 18.5-16.8 29-16.8 11 0 18.4 5.8 22 17.4 1.8 5.4 2.7 15.7 2.7 30.8V450zm105-25.4h-55.5v27c0 14.3 4.7 21.4 14.3 21.4 6.8 0 11-3.7 12.4-11 .4-2.2.6-8.5.6-19h28.3v4c0 10-.2 16-.6 18-.7 5.6-2.8 11-6.6 16.7-7.3 11-18.5 16.5-33.4 16.5-14.3 0-25.5-5.3-33.6-15.8-6-7.7-9-19.7-9-36v-54c0-16.2 3-28.2 8.7-36 8-10.5 19.2-15.8 33.2-15.8 13.8 0 24.8 5.3 33 16 5.5 7.6 8.3 19.6 8.3 36v32z" />
+			<path d="M432.6 365.8c-9.3 0-14 7-14 21v14.5h28V387c0-14-4.6-21.2-14-21.2zM329.5 365.8c-4.8 0-9.5 2.3-14 7V466c4.5 4.6 9.2 6.8 14 6.8 8 0 12-7 12-20.8v-65.6c0-13.8-4-20.8-12-20.8z" />
+		</symbol>
+	</svg>
+	<div class="container-fluid">
+		<div class="page-wrap">
+			<aside class="side-bar">
+				<div class="clock">
+					<div class="hours-container">
+						<div class="hours"></div>
+					</div>
+					<div class="minutes-container">
+						<div class="minutes"></div>
+					</div>
+					<div class="seconds-container">
+						<div class="seconds"></div>
+					</div>
+				</div>
+				<nav class="site-nav">
+					<ul>
+						<li>
+							<a href="#" class="menu-item">
+								<svg>
+									<use xlink:href="#tv-button"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="menu-item inactive">
+								<svg>
+									<use xlink:href="#meditation"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="menu-item inactive">
+								<svg>
+									<use xlink:href="#grid-button"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="menu-item inactive">
+								<svg>
+									<use xlink:href="#four-arrow"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="menu-item inactive">
+								<svg>
+									<use xlink:href="#sound-levels"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="menu-item disable">
+								<svg>
+									<use xlink:href="#connection"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="small-item faq">
+								<svg>
+									<use xlink:href="#question-mark"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="small-item settings">
+								<svg>
+									<use xlink:href="#settings-button"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="user"></a>
+						</li>
+					</ul>
+				</nav>
+			</aside>
+			<div class="main-wrap flex-column">
+				<header class="flex-column">
+					<div class="videobox">
+						<!--
+					<video poster="assets/img/header-bg-photo.jpg" autoplay="true" loop>
+						<source scr="yoga.mp4" type="video/mp4">
+					</video>
+-->
+						<a href="#" class="videobox-button">
+							<svg>
+								<use xlink:href="#play-button"></use>
+							</svg>
+						</a>
+						<div class="videobox--menu">
+							<div class="videobox--menu_block">
+								<a href="#" class="videobox--menu_link">
+									<svg>
+										<use xlink:href="#cloud-flash"></use>
+									</svg>
+								</a>
+								<div class="videobox--menu_title flex-column">
+									<div>
+										<p class="uppercase">Yoga style</p>
+										<h1>Kundalini Yoga</h1>
+									</div>
+									<div>
+										<a href="#" class="uppercase title-button">Follow</a>
+										<a href="#" class="uppercase title-button">Preview</a>
+									</div>
+								</div>
+							</div>
+							<p class="videobox--info">Followers
+								<br> 23279</p>
+						</div>
+					</div>
+					<div class="welcome">
+						<p>Kundalini Yoga, also known as laya yoga, is a school of yoga. Based on a 1935 treatise by Sivananda Saraswati, kundalini yoga was influenced by the tantra and shakta schools of Hinduism. Kundalini yoga derives its name through a focus on awakening kundalini energy through regular practice of meditation, "the yoga of awareness", it aims "to cultivate the creative spiritual potential of a human to uphold values, and focus on the compassion and consciousness needed to serve and heal others.</p>
+						<div class="welcome-list">
+							<h2 class="uppercase">Main principles</h2>
+							<ul>
+								<li>Our consciousness is</li>
+								<li>Aspect of our existence</li>
+								<li>Opher David Chalmers</li>
+								<li>Nothing we know about</li>
+								<li>But at the same time.</li>
+							</ul>
+						</div>
+					</div>
+				</header>
+				<main class="">
+					<div class="head-wrap">
+						<h2 class="uppercase">Kundalini classes</h2>
+						<div class="filter uppercase">
+							<div class="filter-switch row">
+								<a href="#" class="new">New videos</a>
+								<div class="dash"></div>
+								<a href="#" class="popular">Popular</a>
+							</div>
+
+							<div class="filter-select row">
+								<a href="#" class="dropdown">Select teacher <span>&#9013;</span></a>
+								<div class="dash"></div>
+								<p>Level
+									<a href="#">1</a>
+									<a href="#">2</a>
+									<a href="#">3</a>
+								</p>
+								<div class="dash"></div>
+								<p>Duration
+									<a href="#">10</a>
+									<a href="#">20</a>
+									<a href="#">30</a>
+									<a href="#">45</a>
+									<a href="#">60</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="class-wrap">
+						<div class="classbox">
+							<div class="classbox-link">
+								<div class="classbox-image">
+									<img src="assets/img/layer1.jpg" alt="">
+								</div>
+								<a href="#" class="classbox-mentor"></a>
+
+								<div class="classbox-hover">
+									<div class="data">
+										<div class="data_cell">
+											<p class="digits">45</p>
+											<p class="text">Minutes</p>
+										</div>
+										<div class="dash"></div>
+										<div class="data_cell">
+											<p class="digits">1 · 2</p>
+											<p class="text">Levels</p>
+										</div>
+										<div class="dash"></div>
+										<div class="data_cell">
+											<p class="digits">245</p>
+											<p class="text">Students</p>
+										</div>
+										<div class="dash"></div>
+										<div class="data_cell">
+											<p class="digits">20</p>
+											<p class="text">Minutes</p>
+										</div>
+									</div>
+									<a href="" class="link title-button uppercase">Watch this class</a>
+									<div class="review row">
+										<span class="heart"><svg>
+																	<use xlink:href="#heart"></use>
+																</svg></span>
+										<span class="heart"><svg>
+																	<use xlink:href="#heart"></use>
+																</svg></span>
+										<span class="heart"><svg>
+																	<use xlink:href="#heart"></use>
+																</svg></span>
+										<span class="heart"><svg>
+																	<use xlink:href="#heart"></use>
+																</svg></span>
+										<span class="half-heart"><svg>
+																	<use xlink:href="#heart"></use>
+																</svg></span>
+										<p>34 Reviews</p>
+									</div>
+								</div>
+
+							</div>
+							<h3 class="uppercase">Kundalini Yoga</h3>
+							<p class="lead">Yoga for a Total Mind-Body</p>
+							<a href="" class="author">Marianna Sterfenson</a>
+							<p class="info">From the very outset yoga traditions have close the experience of our rational and sensible wor the extraordinary and supernatural.</p>
+						</div>
+						<div class="classbox">
+							<div class="classbox-link">
+								<div class="classbox-image">
+									<img src="assets/img/layer2.jpg" alt="">
+								</div>
+								<a href="#" class="classbox-mentor"></a>
+
+								<div class="classbox-hover">
+									<div class="data">
+										<div class="data_cell">
+											<p class="digits">45</p>
+											<p class="text">Minutes</p>
+										</div>
+										<div class="dash"></div>
+										<div class="data_cell">
+											<p class="digits">1 · 2</p>
+											<p class="text">Levels</p>
+										</div>
+										<div class="dash"></div>
+										<div class="data_cell">
+											<p class="digits">245</p>
+											<p class="text">Students</p>
+										</div>
+										<div class="dash"></div>
+										<div class="data_cell">
+											<p class="digits">20</p>
+											<p class="text">Minutes</p>
+										</div>
+									</div>
+									<a href="" class="link title-button uppercase">Watch this class</a>
+									<div class="review row">
+										<span class="heart"><svg>
+																	<use xlink:href="#heart"></use>
+																</svg></span>
+										<span class="heart"><svg>
+																	<use xlink:href="#heart"></use>
+																</svg></span>
+										<span class="heart"><svg>
+																	<use xlink:href="#heart"></use>
+																</svg></span>
+										<span class="heart"><svg>
+																	<use xlink:href="#heart"></use>
+																</svg></span>
+										<span class="half-heart"><svg>
+																	<use xlink:href="#heart"></use>
+																</svg></span>
+										<p>34 Reviews</p>
+									</div>
+								</div>
+
+							</div>
+							<h3 class="uppercase">Kundalini Yoga</h3>
+							<p class="lead">Yoga for a Total Mind-Body</p>
+							<a href="" class="author">Marianna Sterfenson</a>
+							<p class="info">From the very outset yoga traditions have close the experience of our rational and sensible wor the extraordinary and supernatural.</p>
+						</div>
+						<div class="classbox">
+							<div class="classbox-link">
+								<div class="classbox-image">
+									<img src="assets/img/layer3.jpg" alt="">
+								</div>
+								<a href="#" class="classbox-mentor"></a>
+
+								<div class="classbox-hover">
+									<div class="data">
+										<div class="data_cell">
+											<p class="digits">45</p>
+											<p class="text">Minutes</p>
+										</div>
+										<div class="dash"></div>
+										<div class="data_cell">
+											<p class="digits">1 · 2</p>
+											<p class="text">Levels</p>
+										</div>
+										<div class="dash"></div>
+										<div class="data_cell">
+											<p class="digits">245</p>
+											<p class="text">Students</p>
+										</div>
+										<div class="dash"></div>
+										<div class="data_cell">
+											<p class="digits">20</p>
+											<p class="text">Minutes</p>
+										</div>
+									</div>
+									<a href="" class="link title-button uppercase">Watch this class</a>
+									<div class="review row">
+										<span class="heart"><svg>
+																	<use xlink:href="#heart"></use>
+																</svg></span>
+										<span class="heart"><svg>
+																	<use xlink:href="#heart"></use>
+																</svg></span>
+										<span class="heart"><svg>
+																	<use xlink:href="#heart"></use>
+																</svg></span>
+										<span class="heart"><svg>
+																	<use xlink:href="#heart"></use>
+																</svg></span>
+										<span class="half-heart"><svg>
+																	<use xlink:href="#heart"></use>
+																</svg></span>
+										<p>34 Reviews</p>
+									</div>
+								</div>
+
+							</div>
+							<h3 class="uppercase">Kundalini Yoga</h3>
+							<p class="lead">Yoga for a Total Mind-Body</p>
+							<a href="" class="author">Marianna Sterfenson</a>
+							<p class="info">From the very outset yoga traditions have close the experience of our rational and sensible wor the extraordinary and supernatural.</p>
+						</div>
+						<div class="classbox">
+							<div class="classbox-link">
+								<div class="classbox-image">
+									<img src="assets/img/layer1.jpg" alt="">
+								</div>
+								<a href="#" class="classbox-mentor"></a>
+
+								<div class="classbox-hover">
+									<div class="data">
+										<div class="data_cell">
+											<p class="digits">45</p>
+											<p class="text">Minutes</p>
+										</div>
+										<div class="dash"></div>
+										<div class="data_cell">
+											<p class="digits">1 · 2</p>
+											<p class="text">Levels</p>
+										</div>
+										<div class="dash"></div>
+										<div class="data_cell">
+											<p class="digits">245</p>
+											<p class="text">Students</p>
+										</div>
+										<div class="dash"></div>
+										<div class="data_cell">
+											<p class="digits">20</p>
+											<p class="text">Minutes</p>
+										</div>
+									</div>
+									<a href="" class="link title-button uppercase">Watch this class</a>
+									<div class="review row">
+										<span class="heart"><svg>
+																	<use xlink:href="#heart"></use>
+																</svg></span>
+										<span class="heart"><svg>
+																	<use xlink:href="#heart"></use>
+																</svg></span>
+										<span class="heart"><svg>
+																	<use xlink:href="#heart"></use>
+																</svg></span>
+										<span class="heart"><svg>
+																	<use xlink:href="#heart"></use>
+																</svg></span>
+										<span class="half-heart"><svg>
+																	<use xlink:href="#heart"></use>
+																</svg></span>
+										<p>34 Reviews</p>
+									</div>
+								</div>
+
+							</div>
+							<h3 class="uppercase">Kundalini Yoga</h3>
+							<p class="lead">Yoga for a Total Mind-Body</p>
+							<a href="" class="author">Marianna Sterfenson</a>
+							<p class="info">From the very outset yoga traditions have close the experience of our rational and sensible wor the extraordinary and supernatural.</p>
+						</div>
+						<div class="classbox">
+							<div class="classbox-link">
+								<div class="classbox-image">
+									<img src="assets/img/layer2.jpg" alt="">
+								</div>
+								<a href="#" class="classbox-mentor"></a>
+
+								<div class="classbox-hover">
+									<div class="data">
+										<div class="data_cell">
+											<p class="digits">45</p>
+											<p class="text">Minutes</p>
+										</div>
+										<div class="dash"></div>
+										<div class="data_cell">
+											<p class="digits">1 · 2</p>
+											<p class="text">Levels</p>
+										</div>
+										<div class="dash"></div>
+										<div class="data_cell">
+											<p class="digits">245</p>
+											<p class="text">Students</p>
+										</div>
+										<div class="dash"></div>
+										<div class="data_cell">
+											<p class="digits">20</p>
+											<p class="text">Minutes</p>
+										</div>
+									</div>
+									<a href="" class="link title-button uppercase">Watch this class</a>
+									<div class="review row">
+										<span class="heart"><svg>
+																	<use xlink:href="#heart"></use>
+																</svg></span>
+										<span class="heart"><svg>
+																	<use xlink:href="#heart"></use>
+																</svg></span>
+										<span class="heart"><svg>
+																	<use xlink:href="#heart"></use>
+																</svg></span>
+										<span class="heart"><svg>
+																	<use xlink:href="#heart"></use>
+																</svg></span>
+										<span class="half-heart"><svg>
+																	<use xlink:href="#heart"></use>
+																</svg></span>
+										<p>34 Reviews</p>
+									</div>
+								</div>
+
+							</div>
+							<h3 class="uppercase">Kundalini Yoga</h3>
+							<p class="lead">Yoga for a Total Mind-Body</p>
+							<a href="" class="author">Marianna Sterfenson</a>
+							<p class="info">From the very outset yoga traditions have close the experience of our rational and sensible wor the extraordinary and supernatural.</p>
+						</div>
+						<div class="classbox">
+							<div class="classbox-link">
+								<div class="classbox-image">
+									<img src="assets/img/layer3.jpg" alt="">
+								</div>
+								<a href="#" class="classbox-mentor"></a>
+
+								<div class="classbox-hover">
+									<div class="data">
+										<div class="data_cell">
+											<p class="digits">45</p>
+											<p class="text">Minutes</p>
+										</div>
+										<div class="dash"></div>
+										<div class="data_cell">
+											<p class="digits">1 · 2</p>
+											<p class="text">Levels</p>
+										</div>
+										<div class="dash"></div>
+										<div class="data_cell">
+											<p class="digits">245</p>
+											<p class="text">Students</p>
+										</div>
+										<div class="dash"></div>
+										<div class="data_cell">
+											<p class="digits">20</p>
+											<p class="text">Minutes</p>
+										</div>
+									</div>
+									<a href="" class="link title-button uppercase">Watch this class</a>
+									<div class="review row">
+										<span class="heart"><svg>
+																	<use xlink:href="#heart"></use>
+																</svg></span>
+										<span class="heart"><svg>
+																	<use xlink:href="#heart"></use>
+																</svg></span>
+										<span class="heart"><svg>
+																	<use xlink:href="#heart"></use>
+																</svg></span>
+										<span class="heart"><svg>
+																	<use xlink:href="#heart"></use>
+																</svg></span>
+										<span class="half-heart"><svg>
+																	<use xlink:href="#heart"></use>
+																</svg></span>
+										<p>34 Reviews</p>
+									</div>
+								</div>
+
+							</div>
+							<h3 class="uppercase">Kundalini Yoga</h3>
+							<p class="lead">Yoga for a Total Mind-Body</p>
+							<a href="" class="author">Marianna Sterfenson</a>
+							<p class="info">From the very outset yoga traditions have close the experience of our rational and sensible wor the extraordinary and supernatural.</p>
+						</div>
+					</div>
+					<a href="#" class="loading uppercase">
+						<strong>More</strong>
+
+						<div class="refresh">
+							<svg>
+								<use xlink:href="#refresh-button"></use>
+							</svg>
+						</div>
+
+						<strong>Yoga</strong>
+
+					</a>
+				</main>
+				<footer>
+					<section>
+						<div class="list-wrap">
+							<div class="list-block">
+								<h3 class="">About</h3>
+								<ul>
+									<li><a href="#">Company</a></li>
+									<li><a href="#">Help & Support</a></li>
+									<li><a href="#">Contact</a></li>
+									<li><a href="#">Terms & Privacy</a></li>
+									<li><a href="#">Shop</a></li>
+								</ul>
+							</div>
+							<div class="list-block">
+								<h3 class="">Comunity</h3>
+								<ul>
+									<li><a href="#">Blog</a></li>
+									<li><a href="#">Meetups</a></li>
+									<li><a href="#">Newsletter</a></li>
+									<li><a href="#">Testimonials</a></li>
+									<li><a href="#">Handbook</a></li>
+								</ul>
+							</div>
+							<div class="list-block">
+								<h3 class="">Yoga</h3>
+								<ul>
+									<li><a href="#">Find Classes</a></li>
+									<li><a href="#">Want to teach?</a></li>
+									<li><a href="#">Teams</a></li>
+									<li><a href="#">Advertise</a></li>
+									<li><a href="#">API</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="download">
+							<h3 class="">Download our free ebook</h3>
+							<div class="download-info">
+								<img src="assets/img/magazine.jpg" alt="">
+								<p><strong>The classical techniques of Yoga</strong> consectetur adipisicing elit. Harum fugit odio maiores officiis fuga molestiae accusamus neque necessitatibus voluptatum!</p>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div class="social-wrap">
+							<p>Namaste &copy; 109 LLC. Yoga Community in LA, California</p>
+							<ul class="social">
+								<li>
+									<a href="#">
+										<svg>
+											<use xlink:href="#facebook"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<svg>
+											<use xlink:href="#instagram"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<svg>
+											<use xlink:href="#twitter"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<svg>
+											<use xlink:href="#pinterest"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<svg>
+											<use xlink:href="#youtube"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="download">
+							<p>104596 hours of lifes saved</p>
+						</div>
+					</section>
+				</footer>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="assets/js/script.js"></script>
+	<script>
+		function initLocalClocks() {
+			// Get the local time using JS
+			var date = new Date;
+			var seconds = date.getSeconds();
+			var minutes = date.getMinutes();
+			var hours = date.getHours();
+
+			// Create an object with each hand and it's angle in degrees
+			var hands = [{
+				hand: 'hours',
+				angle: (hours * 30) + (minutes / 2)
+			}, {
+				hand: 'minutes',
+				angle: (minutes * 6)
+			}, {
+				hand: 'seconds',
+				angle: (seconds * 6)
+			}];
+			// Loop through each of these hands to set their angle
+			for (var j = 0; j < hands.length; j++) {
+				var elements = document.querySelectorAll('.' + hands[j].hand);
+				for (var k = 0; k < elements.length; k++) {
+					elements[k].style.webkitTransform = 'rotateZ(' + hands[j].angle + 'deg)';
+					elements[k].style.transform = 'rotateZ(' + hands[j].angle + 'deg)';
+					// If this is a minute hand, note the seconds position (to calculate minute position later)
+					if (hands[j].hand === 'minutes') {
+						elements[k].parentNode.setAttribute('data-second-angle', hands[j + 1].angle);
+					}
+				}
+			}
+		}
+	
+	
+	
+		function setUpMinuteHands() {
+  // Find out how far into the minute we are
+  var containers = document.querySelectorAll('.minutes-container');
+  var secondAngle = containers[0].getAttribute("data-second-angle");
+  if (secondAngle > 0) {
+    // Set a timeout until the end of the current minute, to move the hand
+    var delay = (((360 - secondAngle) / 6) + 0.1) * 1000;
+    setTimeout(function() {
+      moveMinuteHands(containers);
+    }, delay);
+  }
+}
+
+/*
+ * Do the first minute's rotation
+ */
+function moveMinuteHands(containers) {
+  for (var i = 0; i < containers.length; i++) {
+    containers[i].style.webkitTransform = 'rotateZ(6deg)';
+    containers[i].style.transform = 'rotateZ(6deg)';
+  }
+  // Then continue with a 60 second interval
+  setInterval(function() {
+    for (var i = 0; i < containers.length; i++) {
+      if (containers[i].angle === undefined) {
+        containers[i].angle = 12;
+      } else {
+        containers[i].angle += 6;
+      }
+      containers[i].style.webkitTransform = 'rotateZ('+ containers[i].angle +'deg)';
+      containers[i].style.transform = 'rotateZ('+ containers[i].angle +'deg)';
+    }
+  }, 60000);
+}
+	</script>
+</body>
+
+</html>
