@@ -670,7 +670,7 @@ main .row {
 	opacity: .8;
 }
 .data_cell .digits {
-	font-size: 1.5em;
+	font-size: 1.3em;
 	color: #ffffff;
 }
 .data_cell .text {
@@ -679,7 +679,7 @@ main .row {
 	line-height: 1.2;
 }
 .classbox-hover .link {
-	width: 50%;
+	width: 200px;
 	margin-bottom: 25%;
 }
 .classbox-hover .review {
